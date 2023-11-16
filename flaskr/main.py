@@ -12,12 +12,30 @@ bp = Blueprint("flaskr", __name__)
 
 @bp.route('/')
 def index():
+    """
+    A function that serves as the index route for the application.
+
+    Returns:
+        A rendered HTML template for the index page.
+    """
     return render_template('index.html')
 
 
 @bp.route('/data')
 def dump_data():
+    """
+    Generates a data stream by continuously generating and detecting data points.
+
+    Returns:
+        A generator that yields data in the form of JSON strings.
+    """
     def simulate_data_stream():
+        """
+        Simulates a data stream by continuously generating and detecting data points.
+
+        Returns:
+            A generator that yields data in the form of JSON strings.
+        """
         i = -1
         while True:
             i += 1

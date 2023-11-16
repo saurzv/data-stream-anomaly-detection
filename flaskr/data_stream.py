@@ -1,7 +1,10 @@
 import time
 import random
+import logging
 import numpy as np
 from sklearn.ensemble import IsolationForest
+
+logger = logging.getLogger(__name__)
 
 
 class AnomalyDetector:
@@ -27,6 +30,8 @@ class AnomalyDetector:
             anomaly_score = self.model.decision_function([[data_point]])
 
             if anomaly_score < 0:
+                logger.info(
+                    f'\nData Point    :   {data_point}\nAnomaly Score :   {anomaly_score}\n')
                 return data_point
             else:
                 return 'N'

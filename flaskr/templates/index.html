@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>Efficient Data Stream Anomaly Detection</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
       rel="stylesheet"
@@ -10,12 +10,20 @@
     <link href="../static/styles.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="notes">
+      <p><b>Notes:</b></p>
+      <p>
+        Anomalies should appear after window size. (default : 25 data points)
+      </p>
+      <p>Anomalies are marked in with red dots.</p>
+      <p>Streaming data points are marked with green dots.</p>
+      <br /><br />
+    </div>
     <div class="container">
       <canvas id="canvas"></canvas>
     </div>
     <!-- JS libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 
     <!-- chart logic written here -->

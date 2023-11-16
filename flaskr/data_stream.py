@@ -1,7 +1,7 @@
-from sklearn.ensemble import IsolationForest
-import numpy as np
-import random
 import time
+import random
+import numpy as np
+from sklearn.ensemble import IsolationForest
 
 
 class AnomalyDetector:

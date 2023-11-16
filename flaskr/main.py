@@ -1,9 +1,9 @@
+import time
+import json
+from . import data_stream
 from flask import (
     Blueprint, Response, stream_with_context, render_template
 )
-from . import data_stream
-import json
-import time
 
 detector = data_stream.AnomalyDetector()
 
